@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class SavedEcoUsers {
+public class SavedEcoUser {
     private final ResourceUser[] resourceUsers;
     private final String path;
     private final String info;
 
-    public SavedEcoUsers(ResourceUser[] resourceUsers, String path, String info) {
+    public SavedEcoUser(ResourceUser[] resourceUsers, String path, String info) {
         this.resourceUsers = resourceUsers;
         this.path = path;
         this.info = info;

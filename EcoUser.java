@@ -2,11 +2,11 @@ package ecoResourse;
 
 import java.util.Arrays;
 
-public class EcoUsers {
+public class EcoUser {
     private final int maxConsumption;
     private final ResourceUser[] resourceUser;
 
-    public EcoUsers(ResourceUser[] resourceUser, int maxConsumption) {
+    public EcoUser(ResourceUser[] resourceUser, int maxConsumption) {
         this.maxConsumption = maxConsumption;
         this.resourceUser = resourceUser;
     }
