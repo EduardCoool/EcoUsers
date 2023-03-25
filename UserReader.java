@@ -5,15 +5,15 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ReceivedResourseUser {
+public class UserReader {
     private final String path;
     private String info;
 
-    public ReceivedResourseUser(String path) {
+    public UserReader(String path) {
         this.path = path;
     }
 
-    public ResourceUser[] getResourceUser() throws FileNotFoundException {
+    public ResourceUser[] readResourceUser() throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(path)).useDelimiter("\\r\\n|\\|");
         this.info = scanner.nextLine();
         ResourceUser[] arrayUsers = new ResourceUser[0];

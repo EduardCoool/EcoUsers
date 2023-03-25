@@ -2,18 +2,18 @@ package ecoResourse;
 
 import java.util.Arrays;
 
-public class EcoUser {
+public class UserAnalyzer {
     private final int maxConsumption;
-    private final ResourceUser[] resourceUser;
+    private final ResourceUser[] resourceUsers;
 
-    public EcoUser(ResourceUser[] resourceUser, int maxConsumption) {
+    public UserAnalyzer(ResourceUser[] resourceUser, int maxConsumption) {
         this.maxConsumption = maxConsumption;
-        this.resourceUser = resourceUser;
+        this.resourceUsers = resourceUser;
     }
 
     public ResourceUser[] getEcoUsers() {
         ResourceUser[] arrayEcoUsers = new ResourceUser[0];
-        for (ResourceUser user : resourceUser) {
+        for (ResourceUser user : resourceUsers) {
             if (user.getWaterCount() < maxConsumption & user.getGasCount1() + user.getGasCount2()
                     < maxConsumption & user.getElectroCount1() + user.getElectroCount2() < maxConsumption) {
                 arrayEcoUsers = Arrays.copyOf(arrayEcoUsers, arrayEcoUsers.length + 1);

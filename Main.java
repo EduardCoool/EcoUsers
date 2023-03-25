@@ -7,11 +7,11 @@ public class Main {
 
         String path = "C:\\Users\\79510\\Desktop\\Учёба\\data.csv";
 
-        ReceivedResourseUser receivedResourseUser = new ReceivedResourseUser(path);
+        UserReader userReader = new ReceivedResourseUser(path);
 
-        EcoUsers ecoUsers = new EcoUsers(receivedResourseUser.getResourceUser(), 200);
+        UserAnalyzer userAnalyzer = new UserAnalyzer(userReader.readResourceUser(), 200);
 
-        SavedEcoUsers savedEcoUsers = new SavedEcoUsers(ecoUsers.getEcoUsers(), path, receivedResourseUser.getInfo());
-        savedEcoUsers.saveEcoUsers();
+        UserWriter userWriter = new UserWriter(userAnalyzer.getEcoUsers(), path, userReader.getInfo());
+        userWriter.writeUser();
     }
 }
